@@ -8,23 +8,23 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_EXPERIES_IN = '1d';
 
 export const jwttoken = {
-  sign: (payload) => {
+  sign: payload => {
     try {
-      return jwt.sign(payload, JWT_SECRET, {expiresIn: JWT_EXPERIES_IN});
-    } catch(error) {
+      return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPERIES_IN });
+    } catch (error) {
       logger.error('Error signing JWT token:', error);
       throw new Error('Error signing JWT token: ' + error.message);
     }
   },
 
-  verify: (token) => {
+  verify: token => {
     try {
       return jwt.verify(token, JWT_SECRET);
-    } catch(error) {
+    } catch (error) {
       logger.error('Error verifying JWT token:', error);
       throw new Error('Error verifying JWT token: ' + error.message);
     }
-  }
+  },
 };
 
 export default jwttoken;

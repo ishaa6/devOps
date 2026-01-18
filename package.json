@@ -10,7 +10,7 @@
     "#routes/*": "./src/routes/*",
     "#controllers/*": "./src/controllers/*",
     "#utils/*": "./src/utils/*",
-    "#middlewares/*": "./src/middlewares/*",
+    "#middleware/*": "./src/middleware/*",
     "#services/*": "./src/services/*",
     "#validations/*": "./src/validations/*"
   },
@@ -36,6 +36,8 @@
   },
   "homepage": "https://github.com/ishaa6/devOps#readme",
   "dependencies": {
+    "@arcjet/inspect": "^1.0.0-beta.17",
+    "@arcjet/node": "^1.0.0-beta.17",
     "@neondatabase/serverless": "^1.0.2",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
